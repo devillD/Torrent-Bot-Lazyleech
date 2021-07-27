@@ -1,3 +1,6 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/devillD/Torrent-Bot-Lazyleech)
+
+
 <p align="center">
   <img src="https://telegra.ph/file/1e1f6119d27511337af27.jpg">
 </p>

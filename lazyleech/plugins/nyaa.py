@@ -3,6 +3,7 @@ import aiohttp
 import json
 from pyrogram import Client, filters, emoji
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from .. import ALL_CHATS, session, help_dict
 
 @app.on_message(filters.command(['tsb']))
 async def start(_, message):

@@ -3,7 +3,7 @@ import aiohttp
 import json
 from pyrogram import Client, filters, emoji
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from .. import ALL_CHATS, session, help_dict
+from .. import ALL_CHATS
 
 @app.on_message(filters.command(['tsb']))
 async def start(_, message):
@@ -13,7 +13,7 @@ async def start(_, message):
 
 @app.on_message(filters.command(['thelp']))
 async def help(_, message):
-    await message.reply_text("Example: /find titanic")
+    await message.reply_text("Example: /ts titanic")
 
 m = None
 i = 0
@@ -32,7 +32,7 @@ async def find(_, message):
     except:
         pass
     if len(message.command) < 2:
-        await message.reply_text("Usage: /find query")
+        await message.reply_text("Usage: /ts query")
         return
     query = message.text.split(None, 1)[1].replace(" ", "%20")
     m = await message.reply_text("Searching")
@@ -154,13 +154,6 @@ async def callback_query_delete(_, message):
     m = None
     i = 0
     a = None
-    query = None
-    
-help_dict['nyaa'] = ('Nyaa.si',
-'''/ts <i>[search query]</i>
-/nyaa <i>[search query]</i>
-/nyaasi <i>[search query]</i>
-/sts <i>[search query]</i>
-/sukebei <i>[search query]</i>''')
+    query = None    
 
 app.run()

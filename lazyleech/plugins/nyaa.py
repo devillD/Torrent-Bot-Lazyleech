@@ -155,6 +155,12 @@ async def callback_query_delete(_, message):
     i = 0
     a = None
     query = None
-
+    
+help_dict['nyaa'] = ('Nyaa.si',
+'''/ts <i>[search query]</i>
+/nyaa <i>[search query]</i>
+/nyaasi <i>[search query]</i>
+/sts <i>[search query]</i>
+/sukebei <i>[search query]</i>''')
 
 app.run()

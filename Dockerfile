@@ -3,7 +3,7 @@ FROM python:3.9.5-buster
 WORKDIR /BOT
 RUN chmod 777 /BOT
 RUN apt-get -qq update -y
-RUN apt-get -qq install -y wget curl bash git neofetch software-properties-common ffmpeg
+RUN apt-get -qq install -y wget curl bash git neofetch software-properties-common ffmpeg aria2
 
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
